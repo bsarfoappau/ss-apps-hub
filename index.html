@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="access all subject specific apps for the new curriculum in one place">
+  <meta name="keywords"
+    content="plan your lesson, lesson plans, new curriculum, subject apps, year 1, year 2, year 3, shs apps, senior high school apps">
+  <meta name="author" content="Benjamin Sarfo Appau, Jennifer Owusu Ansah">
+
+  <title>SS Apps Hub – Home</title>
+
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION BAR ========== -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <!-- Brand / Logo -->
+    <a href="index.html" class="navbar-brand">SS <span>Apps Hub</span></a>
+
+    <!-- Navigation links -->
+    <ul class="nav-links">
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <!-- ========== END NAV ========== -->
+
+
+  <main>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <header class="page-header">
+      <h1>Find Your <span>Subject App</span></h1>
+      <p>Select your year group and subject to launch the right learning app instantly.</p>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+
+    <div class="container">
+
+      <!-- ========== APP FINDER CARD ========== -->
+      <section class="finder-card" aria-label="App Finder">
+        <h2>Launch an App</h2>
+
+        <!-- Form grid: Year input + Subject dropdown + Go button -->
+        <div class="form-grid">
+
+          <!-- Year label & input -->
+          <div class="form-group">
+            <label for="year-input">Year</label>
+            <input type="text" id="year-input" placeholder="e.g. Year 1 or Year 2" autocomplete="off"
+              aria-describedby="finder-msg" />
+          </div>
+
+          <!-- Subject label & dropdown -->
+          <div class="form-group">
+            <label for="subject-select">Subject</label>
+            <div class="select-wrapper">
+              <select id="subject-select" aria-label="Select a subject">
+                <option value="" disabled selected>-- Choose a subject --</option>
+                <!-- Options are populated by JavaScript below -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Feedback message row -->
+          <p id="finder-msg" role="status" aria-live="polite"></p>
+
+          <!-- Go button -->
+          <button class="btn-go" id="go-btn" type="button">Go to App →</button>
+
+        </div><!-- /form-grid -->
+      </section>
+      <!-- ========== END FINDER CARD ========== -->
+
+
+      <!-- ========== ADVERT BANNER ========== -->
+      <!--
+        Contains a scrolling marquee advert for lesson plans
+        and a WhatsApp contact button.
+      -->
+      <aside class="advert-banner" aria-label="Advertisement">
+
+        <!-- Scrolling marquee text (duplicated for seamless loop) -->
+        <div class="advert-text-wrap" aria-hidden="true">
+          <div class="advert-marquee">
+            <div class="advert-marquee-inner">
+              <p>📚 <strong>Attention Teachers!</strong> Order clean, tailored, and curriculum-aligned lesson plans
+                crafted just for you. Save time, teach better. Click the button to reach us on WhatsApp now!
+                &nbsp;&nbsp;&nbsp;</p>
+            </div>
+            <!-- Duplicate for seamless infinite loop -->
+            <div class="advert-marquee-inner" aria-hidden="true">
+              <p>📚 <strong>Attention Teachers!</strong> Order clean, tailored, and curriculum-aligned lesson plans
+                crafted just for you. Save time, teach better. Click the button to reach us on WhatsApp now!
+                &nbsp;&nbsp;&nbsp;</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visually-hidden text for screen readers -->
+        <span class="sr-only">
+          Attention Teachers: Order clean, tailored lesson plans. Contact us on WhatsApp.
+        </span>
+
+        <!-- WhatsApp button — replace number if needed (country code 233 = Ghana) -->
+        <a href="https://wa.me/233245856832" target="_blank" rel="noopener noreferrer" class="btn-whatsapp"
+          aria-label="Contact us on WhatsApp">
+          <!-- WhatsApp SVG icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Order Lesson Plans
+        </a>
+
+      </aside>
+      <!-- ========== END ADVERT BANNER ========== -->
+
+    </div><!-- /container -->
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-inner">
+      <!-- Copyright notice -->
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> SS Apps Hub. All rights reserved.
+      </p>
+      <!-- Contact / enquiry line -->
+      <p class="footer-contact">
+        For enquiries &amp; help — Email:
+        <a href="mailto:bsarfoappau@gmail.com">bsarfoappau@gmail.com</a>
+      </p>
+      <!--======EMBEDDED MICROSITE======-->
+
+      <p>
+        <a href="https://curriculumresources.edu.gh/" target="_blank" style="text-decoration: underline;"
+          onmouseover="this.style.color='#1a73e8';" onmouseout="this.style.color='';">
+          Access microsite here
+        </a>
+      </p>
+
+
+
+
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    /* -------------------------------------------------------
+       App data: year + subject → destination URL
+       Sourced from ss_apps.xlsx
+    ------------------------------------------------------- */
+    const appData = [
+      /* ---- Year 1 ---- */
+      { year: "year 1", subject: "Accounting", url: "https://www.playlab.ai/project/cmekekfba0ab1kr0u69l9m7jf" },
+      { year: "year 1", subject: "Additional Mathematics", url: "https://www.playlab.ai/project/cmd92w06l04rzh10uj4rc3pwv" },
+      { year: "year 1", subject: "Agricultural Science", url: "https://www.playlab.ai/project/cmd932l2s055fh10uudu9v30i" },
+      { year: "year 1", subject: "Agriculture", url: "https://www.playlab.ai/project/cmd93523905myji0ultzdspqb" },
+      { year: "year 1", subject: "Art and Design Foundation", url: "https://www.playlab.ai/project/cmd93hdgx04v9k60urun1snzm" },
+      { year: "year 1", subject: "Art and Design Studio", url: "https://www.playlab.ai/project/cmd93pozj058tk60u1vi7j5n8" },
+      { year: "year 1", subject: "Biology", url: "https://www.playlab.ai/project/cmd93v07f06h5ji0uae4zk9lj" },
+      { year: "year 1", subject: "Biomedical Science", url: "https://www.playlab.ai/project/cmd93x7ru054oju0uilff0262" },
+      { year: "year 1", subject: "Business Management", url: "https://www.playlab.ai/project/cmekep06f0besnb0uuqf606q5" },
+      { year: "year 1", subject: "Chemistry", url: "https://www.playlab.ai/project/cmd940t7h06ujji0ubvswrck1" },
+      { year: "year 1", subject: "Christian Religious Studies (CRS)", url: "https://www.playlab.ai/project/cmdw9ntmi2h2and0ug3r5stay" },
+      { year: "year 1", subject: "Clothing & Textiles", url: "https://www.playlab.ai/project/cmdw978jx0k83mg0uij7zjef3" },
+      { year: "year 1", subject: "Computing", url: "https://www.playlab.ai/project/cmd9462xe05urjq0u38blwlcq" },
+      { year: "year 1", subject: "Economics", url: "https://www.playlab.ai/project/cmd94ee7j05skgn0uk2rvfvyg" },
+      { year: "year 1", subject: "English Language", url: "https://www.playlab.ai/project/cmdxx258702r9os0ukf1zoqke" },
+      { year: "year 1", subject: "Food and Nutrition", url: "https://www.playlab.ai/project/cmdw9c1rr2i6jm60utaylrnnc" },
+      { year: "year 1", subject: "French", url: "https://www.playlab.ai/project/cmdw8k4gv0jowmg0u81kxyyub" },
+      { year: "year 1", subject: "General Science", url: "https://www.playlab.ai/project/cmd94ugn006q9jq0uu4ntg6y1" },
+      { year: "year 1", subject: "Geography", url: "https://www.playlab.ai/project/cmdw907a32iheo50ujv3ecgl9" },
+      { year: "year 1", subject: "Ghanaian Language (Asante Twi)", url: "https://www.playlab.ai/project/cmdxpx04a2zr2nn0uzjoju8b6" },
+      { year: "year 1", subject: "Government", url: "https://www.playlab.ai/project/cmd94ypa5065ogy0uidiugvn2" },
+      { year: "year 1", subject: "History", url: "https://www.playlab.ai/project/cmd950t2e05e4ix0u7vezzc72" },
+      { year: "year 1", subject: "Intervention (English and Maths)", url: "https://www.playlab.ai/project/cmfocc5ql0hasm40uqjmty9d9" },
+      { year: "year 1", subject: "Information and Communication Technology (ICT)", url: "https://www.playlab.ai/project/cmd952nfd05sdju0uns2559uz" },
+      { year: "year 1", subject: "Literature in English", url: "https://www.playlab.ai/project/cmd954psk065tju0uwu65jc6i" },
+      { year: "year 1", subject: "Management in Living", url: "https://www.playlab.ai/project/cmekev1070atdll0udetpyfqp" },
+      { year: "year 1", subject: "Mathematics (Core)", url: "https://www.playlab.ai/project/cmd959ml706q6k60u7e66i89u" },
+      { year: "year 1", subject: "Music", url: "https://www.playlab.ai/project/cmd95bopy05rles0ukg4jo2p5" },
+      { year: "year 1", subject: "Performing Arts", url: "https://www.playlab.ai/project/cmd95ij56065nes0uv3shu976" },
+      { year: "year 1", subject: "Physics", url: "https://www.playlab.ai/project/cmd95kequ08evji0udoma8669" },
+      { year: "year 1", subject: "Physical Education and Health (Elective)", url: "https://www.playlab.ai/project/cmd95gm2j06kqju0u8bipvxs5" },
+      { year: "year 1", subject: "Physical Education and Health (Core)", url: "https://www.playlab.ai/project/cmd95elao07kmjq0u7tgx043y" },
+      { year: "year 1", subject: "Social Studies", url: "https://www.playlab.ai/project/cmd95sy3u06qzgn0uww395d6c" },
+
+      /* ---- Year 2 ---- */
+      { year: "year 2", subject: "Accounting", url: "https://www.playlab.ai/project/cmeojcma2036fgk0u4pscv17f" },
+      { year: "year 2", subject: "Additional Mathematics", url: "https://www.playlab.ai/project/cme6fmsbj0fbtnk0uz002inv9" },
+      { year: "year 2", subject: "Agricultural Science / Agriculture", url: "https://www.playlab.ai/project/cme6ekrbj0fjxm30uhacwpg5z" },
+      { year: "year 2", subject: "Applied Technology (Automotive & Metal)", url: "https://www.playlab.ai/project/cme6fpwwh09wik90u10hknruu" },
+      { year: "year 2", subject: "Art and Design Foundation", url: "https://www.playlab.ai/project/cme6fztla0984no0uus6zmjmb" },
+      { year: "year 2", subject: "Art and Design Studio", url: "https://www.playlab.ai/project/cme6g1wav0fsenk0u51x1fd4i" },
+      { year: "year 2", subject: "Biology", url: "https://www.playlab.ai/project/cme6fjssk0bbom50u3bk6xwpt" },
+      { year: "year 2", subject: "Biomedical Science", url: "https://www.playlab.ai/project/cme6g4b0o09l0no0ukyjuka73" },
+      { year: "year 2", subject: "Business Management", url: "https://www.playlab.ai/project/cmd97ngc20acujq0usfl5z5v1" },
+      { year: "year 2", subject: "Chemistry", url: "https://www.playlab.ai/project/cme6g5xey0aakk90u6r8olibz" },
+      { year: "year 2", subject: "Christian Religious Studies (CRS)", url: "https://www.playlab.ai/project/cmesm1nji032sgs0vkcasizmi" },
+      { year: "year 2", subject: "Clothing & Textiles", url: "https://www.playlab.ai/project/cme6h94e50apwjd0ucc7wjk10" },
+      { year: "year 2", subject: "Computing", url: "https://www.playlab.ai/project/cme6g8b040bs7m50u2fe3el2q" },
+      { year: "year 2", subject: "Economics", url: "https://www.playlab.ai/project/cme6gikat0cg8m50ubv2or1xz" },
+      { year: "year 2", subject: "English Language", url: "https://www.playlab.ai/project/cme6glvhl0gvgm30uccc5uu7j" },
+      { year: "year 2", subject: "Food and Nutrition", url: "https://www.playlab.ai/project/cme6havtb09ypnl0u463nznvq" },
+      { year: "year 2", subject: "French", url: "https://www.playlab.ai/project/cme6goppi09e6o60ut0ai02zb" },
+      { year: "year 2", subject: "General Science", url: "https://www.playlab.ai/project/cme6graz50dwzm90ukyuuno5x" },
+      { year: "year 2", subject: "Geography", url: "https://www.playlab.ai/project/cmdw6fr442g3fnd0u9fffjfso" },
+      { year: "year 2", subject: "Ghanaian Language (Asante Twi)", url: "https://www.playlab.ai/project/cme6gv49209kvnl0uyv3ie7rx" },
+      { year: "year 2", subject: "Government", url: "https://www.playlab.ai/project/cme6h714p0ge7nk0uw48xnont" },
+      { year: "year 2", subject: "History", url: "https://www.playlab.ai/project/cmdxjohhq2uwtno0vln690jg1" },
+      { year: "year 2", subject: "Intervention (English and Maths)", url: "https://www.playlab.ai/project/cmfocc5ql0hasm40uqjmty9d9" },
+      { year: "year 2", subject: "Information and Communication Technology (ICT)", url: "https://www.playlab.ai/project/cmekgp6rq0bjkp20u76nao8s4" },
+      { year: "year 2", subject: "Literature in English", url: "https://www.playlab.ai/project/cmekgtiug0b55l50uflwfsy0c" },
+      { year: "year 2", subject: "Management in Living", url: "https://www.playlab.ai/project/cme6hcu7o0i1rm30udu4jxxlt" },
+      { year: "year 2", subject: "Mathematics (Core)", url: "https://www.playlab.ai/project/cmekh06gb0c0ekr0u8dflebla" },
+      { year: "year 2", subject: "Performing Arts", url: "https://www.playlab.ai/project/cmekh7n4u0cmxmv0u1djjqig9" },
+      { year: "year 2", subject: "Physics", url: "https://www.playlab.ai/project/cmekh9xfg0bspmd0ujw1h9gqb" },
+      { year: "year 2", subject: "Physical Education and Health (Elective)", url: "https://www.playlab.ai/project/cmekh5a6a0blzl50uyxvqdz8j" },
+      { year: "year 2", subject: "Physical Education and Health (Core)", url: "https://www.playlab.ai/project/cme6gexy30c49m50uxxvx0iu8" },
+      { year: "year 2", subject: "Social Studies", url: "https://www.playlab.ai/project/cmekhi7l30cbsp20ulf2a5p5w" },
+    ];
+
+    /* -------------------------------------------------------
+       Populate the subject dropdown with unique subject names
+       (sorted alphabetically, no duplicates)
+    ------------------------------------------------------- */
+    const subjectSelect = document.getElementById('subject-select');
+    const uniqueSubjects = [...new Set(appData.map(d => d.subject))].sort();
+
+    uniqueSubjects.forEach(subj => {
+      const opt = document.createElement('option');
+      opt.value = subj;
+      opt.textContent = subj;
+      subjectSelect.appendChild(opt);
+    });
+
+    /* -------------------------------------------------------
+       Go button click handler:
+       1. Read year input (trim + lowercase for comparison)
+       2. Read selected subject
+       3. Look up matching entry in appData
+       4. Open the URL in a new tab, or show an error message
+    ------------------------------------------------------- */
+    document.getElementById('go-btn').addEventListener('click', function () {
+      const yearRaw = document.getElementById('year-input').value.trim();
+      const subjectRaw = subjectSelect.value;
+      const msgEl = document.getElementById('finder-msg');
+
+      /* Basic validation */
+      if (!yearRaw) {
+        msgEl.textContent = '⚠ Please enter a year (e.g. Year 1 or Year 2).';
+        return;
+      }
+      if (!subjectRaw) {
+        msgEl.textContent = '⚠ Please select a subject from the dropdown.';
+        return;
+      }
+
+      /* Case-insensitive year match */
+      const yearKey = yearRaw.toLowerCase().replace(/\s+/g, ' ');
+
+      /* Find match in data array */
+      const match = appData.find(
+        d => d.year === yearKey && d.subject === subjectRaw
+      );
+
+      if (match) {
+        msgEl.textContent = '';
+        /* Open destination in a new browser tab */
+        window.open(match.url, '_blank', 'noopener,noreferrer');
+      } else {
+        msgEl.textContent = `⚠ No app found for "${yearRaw}" + "${subjectRaw}". Check your entries.`;
+      }
+    });
+
+    /* -------------------------------------------------------
+       Auto-fill footer copyright year dynamically
+    ------------------------------------------------------- */
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  </script>
+  <!-- ========== END JAVASCRIPT ========== -->
+
+</body>
+
+</html>
